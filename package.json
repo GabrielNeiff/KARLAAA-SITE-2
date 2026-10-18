@@ -8,6 +8,7 @@
     "start": "npm run dev",
     "prepare:page": "node scripts/build-page.mjs",
     "build:site": "node scripts/build-page.mjs --compact",
+    "package:sites": "python3 scripts/package-for-sites.py",
     "dev": "npm run prepare:page && npm run build:site && vite --host 0.0.0.0",
     "build": "npm run prepare:page && npm run build:site && vite build && node scripts/create-standalone.mjs",
     "preview": "vite preview --host 0.0.0.0"
