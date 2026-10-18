@@ -1,0 +1,20 @@
+{
+  "name": "karla-muller-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "start": "npm run dev",
+    "prepare:page": "node scripts/build-page.mjs",
+    "build:site": "node scripts/build-page.mjs --compact",
+    "dev": "npm run prepare:page && npm run build:site && vite --host 0.0.0.0",
+    "build": "npm run prepare:page && npm run build:site && vite build && node scripts/create-standalone.mjs",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@fontsource-variable/cormorant-garamond": "5.3.0",
+    "@fontsource-variable/manrope": "5.3.0"
+  },
+  "devDependencies": { "vite": "8.3.4" }
+}
